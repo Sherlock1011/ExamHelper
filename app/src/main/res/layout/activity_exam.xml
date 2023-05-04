@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ExamActivity">
+
+    <TextView
+        android:id="@+id/exam_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="《移动开发编程》期末考试"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/exam_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:id="@+id/exam_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#C4FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/single"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="1.单选题(50分)"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/question_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="（1）请选择以下四个选项中正确的一项："
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/option_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. 正确" />
+
+                <RadioButton
+                    android:id="@+id/option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. 差一点" />
+
+                <RadioButton
+                    android:id="@+id/option3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. 差很多" />
+
+                <RadioButton
+                    android:id="@+id/option4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. 全错" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/multi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="2.多选题(50分)"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/multi_question_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="（1）请选择以下包含正确字样的语句："
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/multi_option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A. 有点正确" />
+
+            <CheckBox
+                android:id="@+id/multi_option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B. 差一点正确" />
+
+            <CheckBox
+                android:id="@+id/multi_option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C. 差很多正确" />
+
+            <CheckBox
+                android:id="@+id/multi_option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="D. 不正确" />
+
+            <CheckBox
+                android:id="@+id/multi_option5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E. 错误" />
+        </LinearLayout>
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exam_layout"
+        app:srcCompat="@drawable/submit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
